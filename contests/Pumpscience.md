@@ -1,0 +1,69 @@
+# [M-02] Fee Calculation Bug Creates 7.76% Economic Discontinuity
+
+## Impact
+
+Medium. The fee calculation creates a significant price cliff that could be exploited for arbitrage.
+
+## Description
+
+The bonding curve implements a 3-phase fee structure with a linear decrease in phase 2. However, there's a major discontinuity at the phase 2-3 boundary (slots 250-251) where fees suddenly drop from 8.76% to 1%, creating a 7.76% cliff.
+
+Here's the problematic code:
+
+```rust
+if slots_passed < 150 {
+    // Phase 1: 99% fees
+    sol_fee = bps_mul(9900, amount, 10_000).unwrap();
+} else if slots_passed >= 150 && slots_passed <= 250 {
+    // Phase 2: Linear decrease
+    let fee_bps = (-8_300_000_i64)
+        .checked_mul(slots_passed as i64)?
+        .checked_add(2_162_600_000)?
+        .checked_div(100_000)?;
+    sol_fee = bps_mul(fee_bps as u64, amount, 10_000).unwrap();
+} else {
+    // Phase 3: 1% fees
+    sol_fee = bps_mul(100, amount, 10_000).unwrap();
+}
+```
+
+The issue is in the linear decrease formula's coefficients. Let's look at what happens around the transition:
+
+```
+Slot 248: 10.42% fee
+Slot 249: 9.59% fee
+Slot 250: 8.76% fee
+Slot 251: 1.00% fee  <- Sudden drop
+Slot 252: 1.00% fee
+```
+
+This creates a clear arbitrage opportunity at the phase boundary. A trader could:
+
+1. Wait for slot 250
+2. Prepare two transactions
+3. Execute first tx at 8.76% fee
+4. Submit second tx immediately when slot 251 starts at 1% fee
+5. Profit from the 7.76% difference
+
+## Root Cause
+
+The coefficients in the linear decrease formula are wrong:
+
+```rust
+// Current formula
+(-8_300_000 * slots_passed + 2_162_600_000) / 100_000
+```
+
+This formula should decrease from 99% at slot 150 to 1% at slot 250, but instead it only gets down to 8.76% before the hard switch to 1%.
+
+## Fix
+
+The coefficients need to be recalculated to hit exactly 1% at slot 250:
+
+```rust
+// Fix: New coefficients for proper linear decrease
+let fee_bps = (-9_800_000_i64)
+    .checked_mul(slots_passed as i64)?
+    .checked_add(2_470_100_000)?
+    .checked_div(100_000)?;
+```
