@@ -8,7 +8,7 @@ A Rust focused Security firm breaking barriers in chains like Solana, Cosmwasm, 
 
 | Contest | Description | Vulnerabilities Found | Rank | Report |
 |---------|-------------|----------------------|------|--------|
-| [Inclusive-Monorepo](https://cantina.xyz/competitions/3eff5a8f-b73a-4cfe-8c54-546b475548f0/leaderboard) | Solana-native, Cross-chain | 15 High, 2 Medium (13 solos) | 🥈 2nd | [🧾](./contests/Inclusive-monorepo.md) |
+| [Inclusive-Monorepo](https://cantina.xyz/competitions/3eff5a8f-b73a-4cfe-8c54-546b475548f0/leaderboard) | Solana-native, Cross-chain | 15 High, 2 Medium (13 solos) | 🥈 2nd | [🧾](./contests/Inclusive-finance/) |
 
 ## Competitive Audits
 
