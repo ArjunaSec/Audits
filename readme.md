@@ -15,7 +15,7 @@ A Rust focused Security firm breaking barriers in chains like Solana, Cosmwasm, 
 | Protocol | Description | Vulnerabilities Found | Rank | Report |
 |----------|-------------|----------------------|------|--------|
 | [Soon-Labs/Soon](https://cantina.xyz/competitions/08c2b0b4-8449-4136-82a2-7074ccdfffac/leaderboard) | SVM, cross-chain | 3 Highs 1 solo | 🥇 10th | [🧾](./contests/Soon-SVM.md) |
-| [Pump-Science](https://code4rena.com/audits/2025-01-pump-science) | Solana, bonding-curve | 1 M | 🥇 13th | [🧾](./contests/Pumpscience.md) |
+| [Pump-Science](https://code4rena.com/audits/2025-01-pump-science) | Solana, bonding-curve | 1 M | 🥇 13th | [🧾](./contests/Pump-science/M-01.md) |
 
 ## Skills
 
