@@ -14,7 +14,7 @@ A Rust focused Security firm breaking barriers in chains like Solana, Cosmwasm, 
 
 | Protocol | Description | Vulnerabilities Found | Rank | Report |
 |----------|-------------|----------------------|------|--------|
-| [Soon-Labs/Soon](https://cantina.xyz/competitions/08c2b0b4-8449-4136-82a2-7074ccdfffac/leaderboard) | SVM, cross-chain | 3 Highs 1 solo | 🥇 10th | [🧾](./contests/Soon-SVM.md) |
+| [Soon-Labs/Soon](https://cantina.xyz/competitions/08c2b0b4-8449-4136-82a2-7074ccdfffac/leaderboard) | SVM, cross-chain | 3 Highs 1 solo | 🥇 10th | [🧾](./contests//Soon-svm/) |
 | [Pump-Science](https://code4rena.com/audits/2025-01-pump-science) | Solana, bonding-curve | 1 M | 🥇 13th | [🧾](./contests/Pump-science/M-01.md) |
 
 ## Skills
@@ -27,5 +27,5 @@ A Rust focused Security firm breaking barriers in chains like Solana, Cosmwasm, 
 ## Contact
 
 - **Twitter**: [@arjuna_sec](https://twitter.com/arjuna_sec)
-- **GitHub**: [github.com/arjuna-audits](https://github.com/arjuna-audits)
+- **GitHub**: [github.com/Arjuna](https://github.com/arjuna_sec)
 - **Email**: arjuna_sec@proton.me
