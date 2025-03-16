@@ -8,13 +8,13 @@ A Rust focused Security firm breaking barriers in chains like Solana, Cosmwasm, 
 
 | Contest | Description | Vulnerabilities Found | Rank | Report |
 |---------|-------------|----------------------|------|--------|
-| [Inclusive-Monorepo](https://cantina.xyz/competitions/3eff5a8f-b73a-4cfe-8c54-546b475548f0/leaderboard) | Solana-native, Cross-chain | 15 High, 2 Medium (13 solos) | 🥈 2nd | [🧾]() |
+| [Inclusive-Monorepo](https://cantina.xyz/competitions/3eff5a8f-b73a-4cfe-8c54-546b475548f0/leaderboard) | Solana-native, Cross-chain | 15 High, 2 Medium (13 solos) | 🥈 2nd | [🧾](./contests/Inclusive-monorepo.md) |
 
 ## Competitive Audits
 
 | Protocol | Description | Vulnerabilities Found | Rank | Report |
 |----------|-------------|----------------------|------|--------|
-| [Soon-Labs/Soon](https://cantina.xyz/competitions/08c2b0b4-8449-4136-82a2-7074ccdfffac/leaderboard) | SVM, cross-chain | 3 Highs 1 solo | 🥇 10th | [🧾](./contests/) |
+| [Soon-Labs/Soon](https://cantina.xyz/competitions/08c2b0b4-8449-4136-82a2-7074ccdfffac/leaderboard) | SVM, cross-chain | 3 Highs 1 solo | 🥇 10th | [🧾](./contests/Soon-SVM.md) |
 | [Pump-Science](https://code4rena.com/audits/2025-01-pump-science) | Solana, bonding-curve | 1 M | 🥇 13th | [🧾](./contests/Pumpscience.md) |
 
 ## Skills
